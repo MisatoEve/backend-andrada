@@ -8,7 +8,7 @@ const fs = require('fs');
 class ProductManager {
     //▼pasar por parámetro la ruta de DB
     constructor(path) {
-        this.path = path
+        this.path = path;
     }
     //▼obtenemos id del producto. Lee el DB y devuelve el largo del array +1
     getProductId = async () => {
@@ -118,6 +118,7 @@ class ProductManager {
 //▼  PROCESO DE TESTING ▼ 
 
 // ▼ ✓Se crea una instancia de la clase “ProductManager”
+
 const misato = new ProductManager("./DB.json")
 
 // ▼ ✓Al llamar a getProducts() devuelve productos - error y mensaje
@@ -158,12 +159,3 @@ misato.addProduct(
 // ▼ ✓Se verifica que el producto haya sido eliminado y devuelva un array vacío
 
 //console.log(await misato.getProducts())
-
-//misato.getProducts().then((products) => {
-//   if (products !== undefined) {
-//     const result = JSON.parse(products);
-//     console.log(result);
-//   }
-// });
-
-

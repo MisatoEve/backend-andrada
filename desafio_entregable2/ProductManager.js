@@ -121,19 +121,9 @@ class ProductManager {
 const misato = new ProductManager("./DB.json")
 
 // ▼ ✓Al llamar a getProducts() devuelve productos - error y mensaje
-
-//console.log(misato)
-//console.log(misato.getProducts())
 //console.log(await misato.getProducts())
+
 // ▼ ✓Se agrega un nuevo producto
-
-//misato.getProducts().then((products) => {
-//   if (products !== undefined) {
-//        const result = JSON.parse(products);
-//        console.log(result);
-//    }
-//});
-
 misato.addProduct(
     "Producto prueba",
     "Este es un producto prueba",
@@ -143,22 +133,14 @@ misato.addProduct(
     25
 );
 
-// ▼ ✓Se llama a getProducts() nuevamente con el prodcuto ya ingresado en el array
+// ▼ ✓Se llama a getProducts() nuevamente con el producto ya ingresado en el array
 //console.log(await misato.getProducts())
 
 // ▼ ✓Se llama a la funcion getProductById para verificar que exista en la DB
-
 //console.log(await misato.getProductById(1))
 
-//misato.getProducts().then((products) => {
-//   const result = JSON.parse(products);
-//   console.log(result);
-// });
-//misato.getProductById(1).then((product) => {
-//    console.log(product);
-// });
-
-// ▼ ✓Se invoca a la funcion updateProduct con objeto completo y las modificaciones este test devuelve el objeto por consola para verificar los cambios
+// ▼ ✓Se llama a la función updateProduct con objeto completo y las modificaciones. 
+//►Se devuelve el objeto por consola para verificar los cambios
 //const newObj = {
 //    title: "Producto de prueba actualizado",
 //    description: "Este es el producto actualizado",
@@ -168,7 +150,6 @@ misato.addProduct(
 //    stock: 50,
 //};
 //misato.updateProduct(1, newObj);
-//misato.deleteProduct(1);
 
 // ▼ ✓Se llama a la funcion deleteProduct con el id del objeto a eliminar
 
